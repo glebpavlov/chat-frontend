@@ -1,0 +1,21 @@
+@import 'src/assets/styles/variables';
+.chat-list-wrapper{
+  background-color: $surface-a;
+  height: 100vh;
+  width: 100%;
+
+  .chat-list-item{
+    padding: 15px;
+    color: $text-color;
+    cursor: pointer;
+    font-size: 15px;
+    user-select: none;
+    &:hover{
+      background-color: $surface-d;
+    }
+
+    &.active{
+      background-color: $surface-b;
+    }
+  }
+}

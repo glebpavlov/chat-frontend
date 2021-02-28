@@ -1,0 +1,7 @@
+<div class="chat-history-element-wrapper">
+  <div
+    class="chat-history-element-body p-shadow-3"
+    [ngClass]="{'own': isOwn, 'someone': !isOwn}">
+    {{message.body}}
+  </div>
+</div>

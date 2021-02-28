@@ -1,0 +1,28 @@
+@import 'src/assets/styles/variables';
+.chat-history-element-wrapper {
+  &::after{
+    display: block;
+    content: "";
+    clear: both;
+  }
+  .chat-history-element-body {
+    display: block;
+    color: $text-color;
+    min-height: 30px;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    min-width: 20%;
+
+    &.own {
+      background-color: $primary-color;
+      float: right;
+    }
+
+    &.someone {
+      background-color: $surface-d;
+      float: left;
+    }
+  }
+
+}
