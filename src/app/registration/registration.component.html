@@ -1,0 +1,64 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 offset-md-0 col-xl-6 offset-xl-3 mt-1 mt-xl-5">
+      <p-card header="Регистрация">
+        <form [formGroup]="form">
+          <h4>Введите данные для входа</h4>
+          <div class="p-fluid row">
+            <div class="p-field col-md-12 col-xl-6">
+              <label for="login">Логин</label>
+              <input formControlName="login" id="login" type="text" pInputText>
+            </div>
+            <div class="p-field col-md-12 col-xl-6">
+              <label for="password">Пароль</label>
+              <div class="p-inputgroup">
+                <input formControlName="password" id="password" [type]="isShowPassword? 'text': 'password'"
+                       type="password" pInputText>
+                <span (click)="isShowPassword = !isShowPassword"
+                      id="show-password"
+                      class="p-inputgroup-addon"
+                      [ngClass]="{'show-password': isShowPassword}">
+                <i class="pi pi-eye"></i>
+              </span>
+              </div>
+            </div>
+          </div>
+
+
+          <h4>Расскажите о себе</h4>
+          <div class="p-fluid">
+            <div class="p-field">
+              <p-inputSwitch formControlName="dontWantAbout" id="dont-want"></p-inputSwitch>
+              <label for="dont-want">Не хочу рассказывать о себе</label>
+            </div>
+          </div>
+          <ng-container *ngIf="!isDontWantAbout">
+            <div class="p-fluid row">
+              <div class="p-field col-md-12 col-xl-6">
+                <label for="firstname">Имя</label>
+                <input id="firstname" type="text" pInputText>
+              </div>
+              <div class="p-field col-md-12 col-xl-6">
+                <label for="lastname">Фамилия</label>
+                <input id="lastname" type="text" pInputText>
+              </div>
+            </div>
+            <div class="p-fluid row">
+              <div class="p-field col-md-12 col-xl-6">
+                <label for="email">E-mail</label>
+                <input id="email" type="email" pInputText>
+              </div>
+            </div>
+          </ng-container>
+
+          <div class="p-fluid row">
+            <div class="p-field col-md-12 offset-md-0 col-xl-3 offset-xl-9">
+              <p-button label="Отправить"></p-button>
+            </div>
+          </div>
+        </form>
+      </p-card>
+    </div>
+  </div>
+</div>
+

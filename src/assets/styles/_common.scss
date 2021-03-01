@@ -2,11 +2,15 @@ html, body {
   min-height: 100%;
   height: auto;
   margin: 0;
-  overflow: hidden;
 }
 
 html {
+
+  font-size: 14px;
+}
+body {
   background-color: var(--surface-b);
+  color: var(--text-color);
 
   font-family: var(--font-family);
 }
