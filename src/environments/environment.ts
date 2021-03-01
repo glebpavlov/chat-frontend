@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  title: 'Chat'
+  title: 'Chat',
+  apiUrl: 'http://localhost:3000'
 };
 
 /*

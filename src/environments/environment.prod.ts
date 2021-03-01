@@ -1,4 +1,5 @@
 export const environment = {
   production: true,
-  title: 'Chat'
+  title: 'Chat',
+  apiUrl: '/api'
 };
